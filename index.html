@@ -2,7 +2,8 @@
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
-
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/global.js"></script>
 	<title>Início</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Portfólio de um programador Web e Android">
@@ -14,6 +15,32 @@
 	<link href="https://fonts.googleapis.com/css?family=Philosopher|Roboto+Slab" rel="stylesheet">
 </head>
 <body>
-alfujalskfhalsjkdhaslkdhask
+	<header class="cabecalho">
+		<button id="btn-menu"><i class="fa fa-bars fa-lg"></i></button>
+		<nav id="menu">
+			<a id="btn-close">x</a>
+			<ul>
+				<li><a class="scroll" href="#home">Início</a></li>
+				<li><a class="scroll" href="#about">Sobre</a></li>
+				<li><a class="scroll" href="#">Skills</a></li>
+				<li><a class="scroll" href="#">Portfólio</a></li>
+				<li><a class="scroll" href="#">Contato</a></li>
+			</ul>
+		</nav>
+	</header>
+	<script>
+		$("#btn-menu").click(function(){
+			$("#menu").show();
+		});
+		$("#btn-close").click(function(){
+			$("#menu").hide();
+		});
+	</script>
+	<section id="home">
+		<ul>
+	</section>
+	<section id="about">
+		askldjasl
+	</section>
 </body>
 </html>
