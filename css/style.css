@@ -59,7 +59,7 @@ html,body{
 	text-align: center;
 	color: #000;
 	border-radius: 40px;
-	border: 0.1px solid #2680ff; 
+	border: 1px solid #2680ff; 
 	cursor: pointer;
 	background-color: #fff;
 }
@@ -141,7 +141,7 @@ html,body{
 
 #about h5{
 	padding: 0% 10%;
-	padding-bottom: 30px; 
+	padding-bottom: 50px; 
 	color: #4f4f51;
 }
 
@@ -155,8 +155,9 @@ html,body{
 }
 #contact{
 	background-color: #22e8a6;
-	height: 500px;
+	padding-bottom: 70px; 
 }
+
 footer{
 	background-color: #fff;
 	height: 100px;
@@ -182,6 +183,73 @@ footer #copyright{
 }
 
 footer i:hover{
+	background-color: #2680ff;
+	color: #fff;
+}
+
+form{
+	text-align: center;
+	padding: 80px 25px 0 25px;
+	color: #4f4f51;
+}
+
+form h2{
+	font-family: 'Philosopher', sans-serif;
+	color: #fff;
+	font-size: 1.5em;
+}
+
+form h5{
+	text-align: center;
+	padding: 0 10px 0 10px;
+}
+
+form a{
+	color: #4f4f51;
+}
+
+form h6{
+	font-size: 0.8em;
+	color: #4f4f51;
+	text-align: left;
+	padding-bottom: 10px;
+}
+
+form textarea{
+	width: 100%;
+	border-radius: 10px;
+	padding: 5px 10px;
+	margin-top: 10px;
+	border: 1.5px solid #2680ff;
+	color: #4f4f51;
+}
+
+form .formulario{
+	width: 100%;
+	padding: 5px 10px;
+	border-radius: 20px;
+	margin-top: 10px;
+	border: 1.5px solid #2680ff;
+	color: #4f4f51;
+}
+
+form .enviar{
+	padding: 5px 15px;
+	background-color: #fff;
+	color: #2680ff;
+	border: 1px solid #2680ff;
+	
+	border-radius: 10px;
+	cursor: pointer;
+	text-decoration: none;
+	font-family: 'Philosopher', sans-serif;
+	font-size: 1.2em;
+	transition: 0.5s color;
+	transition: 0.5s background-color;
+	transition: 0.5s border;
+}
+form .enviar:hover{
+	border: 1px solid #fff; 
 	background-color: #2680ff;
 	color: #fff;
 }
