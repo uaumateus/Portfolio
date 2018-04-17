@@ -87,7 +87,7 @@ html,body{
 	width: 80%;
 	text-align: center;
 	margin-left: 10%;
-	margin-top: 60%;
+	margin-top: 35%;
 	float: left;
 }
 #conteudoInicial h1{
@@ -151,7 +151,8 @@ html,body{
 }
 #works{
 	background-color: #1ad8cf;
-	height: 500px;
+	padding-bottom: 70px; 
+	text-align: center;
 }
 #contact{
 	background-color: #22e8a6;
@@ -252,4 +253,46 @@ form .enviar:hover{
 	border: 1px solid #fff; 
 	background-color: #2680ff;
 	color: #fff;
+}
+
+#works h1{
+	color: #fff;
+	text-align: center;
+	font-size: 2em;
+	font-family: 'Philosopher', sans-serif;
+	padding-top: 70px;
+}
+
+#works #btn-web, #btn-android{
+	margin-top: 5px;
+	font-size: 0.8em;
+	padding: 2px 0 2px 0;
+	width: 65px;
+	border: 1px solid #fff;
+	color: #fff;
+}
+
+#works #btn-web{
+	background-color: #fff;
+	color: #1ad8cf;
+	border-radius: 50px 0 0 50px;
+}
+
+#works #btn-android{
+	background-color: #1ad8cf;
+	color: #fff;
+	border-radius: 0 50px 50px 0;
+}
+
+#works img{
+	width: 100%;
+}
+
+#works .job{
+	margin-top: 40px;
+	border: 5px solid #fff;
+	width: 85%;
+	border-radius: 10px;
+	background-color: #fff;
+	color: #26b3ff;
 }
