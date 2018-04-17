@@ -62,7 +62,14 @@ html,body{
 	border: 1px solid #2680ff; 
 	cursor: pointer;
 	background-color: #fff;
+	transition: 1s background-color;
+	transition: 0.5s color;
 }
+#btn-menu:hover{
+	background-color: #2680ff;
+	color: #fff;
+}
+
 #btn-close{
 	color: #2680ff;
 	float: right;
@@ -103,6 +110,10 @@ html,body{
 	left: 44%;
 	margin-bottom: 10px;
 	position: absolute;
+}
+
+#conteudoInicial img{
+	width: 40%;
 }
 
 #btn-ir{
@@ -285,8 +296,7 @@ form .enviar:hover{
 }
 
 #works img{
-	width: 100%;
-}
+	width: 100%;}
 
 #works .job{
 	margin-top: 40px;
@@ -296,3 +306,7 @@ form .enviar:hover{
 	background-color: #fff;
 	color: #26b3ff;
 }
+
+ #works .job:hover{
+ 	opacity: 0.8;
+ }
