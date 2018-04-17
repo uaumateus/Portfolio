@@ -94,7 +94,7 @@ html,body{
 	width: 80%;
 	text-align: center;
 	margin-left: 10%;
-	margin-top: 35%;
+	margin-top: 25%;
 	float: left;
 }
 #conteudoInicial h1{
@@ -113,7 +113,7 @@ html,body{
 }
 
 #conteudoInicial img{
-	width: 40%;
+	width: 50%;
 }
 
 #btn-ir{
