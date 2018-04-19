@@ -5,16 +5,12 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="js/global.js"></script>
 	<title>Início</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Portfólio de um programador Web e Android">
-	<meta name="keywords" content="Portfólio, Sites">
-	<meta name="robots" content="index, follow">
-	<meta name="author" content="Mateus Santos">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Philosopher|Roboto+Slab" rel="stylesheet">
 </head>
 <body>
+	<!-- CABEÇALHO/MENU-->
 	<header class="cabecalho">
 		<a href="#home" class="scroll"><h1 id="logo">Mateus Santos</h1></a>
 		<button id="btn-menu"><i class="fa fa-bars fa-lg"></i></button>
@@ -29,14 +25,8 @@
 			</ul>
 		</nav>
 	</header>
-	<script>
-		$("#btn-menu").click(function(){
-			$("#menu").show();
-		});
-		$("#btn-close").click(function(){
-			$("#menu").hide();
-		});
-	</script>
+
+	<!--PÁGINA INICIAL-->
 	<section id="home">
 		<div id="conteudoInicial">
 			<img src="img/avatarRosto.png"><br/>
@@ -46,34 +36,45 @@
 			<a href="#about" class="scroll"><i class="fas fa-chevron-down"></i></a>
 		</div>
 	</section>
+
+	<!--PÁGINA SOBRE-->
 	<section id="about">
 		<img src="img/profile.jpg">
 		<h1>Quem é Mateus Santos?</h1><br/>
 		<h5>Me chamo Mateus Pereira dos Santos, tenho 18 anos e resido em Cascavel-CE, cidade metropolitana de Fortaleza. Possuo curso técnico em informática atrelada ao ensino médio, porém meu contato com a programação veio antes disso, por volta dos 13 anos, quando descobri o universo do desenvolvimento web. Atualmente estou cursando Sistemas e Mídias Digitais na Universidade Federal do Ceará, curso este que além de aperfeiçoar meus conhecimentos de programação, ainda me possibilita ser um profissional muito mais completo, sendo capaz de entender e desenvolver projetos em diversas áreas da tecnologia, como design, audiovisual, redes de computadores... Durante esse meio tempo me apaixonei também pelo mundo mobile, e desde então me tornei mais focado no desenvolvimento de sistemas Web e Android.</h5>
 	</section>
+
+	<!--PÁGINA HABILIDADES-->
 	<section id="skills">
 		Aqui vai ter as minhas habilidades
 	</section>
+
+	<!--PÁGINA TRABALHOS-->
 	<section id="works">
 		<h1>Trabalhos</h1>
 		<button id="btn-web">Web</button>
 		<button id="btn-android">Android</button><br/>
 		<center><div class="job">
 			<i class="fas fa-ellipsis-h" id="fone"></i>
+			<h3>SmartEar</h3>
 			<img src="img/smartEar.png">
 			<i class="fas fa-stop-circle"></i>
 		</div>
 		<div class="job">
 			<i class="fas fa-ellipsis-h" id="fone"></i>
+			<h3>SmartEar</h3>
 			<img src="img/smartEar.png">
 			<i class="fas fa-stop-circle"></i>
 		</div>
 		<div class="job">
 			<i class="fas fa-ellipsis-h" id="fone"></i>
+			<h3>SmartEar</h3>
 			<img src="img/smartEar.png">
 			<i class="fas fa-stop-circle"></i>
 		</div></center>
 	</section>
+
+	<!--PÁGINA CONTATO-->
 	<section id="contact">
 		<form>
 			<h2>Ficou interessado no meu trabalho?</h2><br/><h5>Entre em contato comigo através do e-mail: </h5><a href="mailto:mateus.pereira99@hotmail.com">mateus.pereira99@hotmail.com</a><br/><br/>
@@ -87,6 +88,8 @@
 		</form>
 		
 	</section>
+
+	<!--RODAPÉ / REDES SOCIAIS-->
 	<footer>
 		<a href="https://www.facebook.com/uaumateus" title="facebook.com/uaumateus" target="_blank"><i class="fab fa-facebook-f"></i></a>
 		<a href="https://www.instagram.com/uau_mateus" title="instagram.com/uau_mateus" target="_blank"><i class="fab fa-instagram"></i></a>
