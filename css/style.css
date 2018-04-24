@@ -92,6 +92,12 @@ html,body{
 	text-align: center;
 }
 
+#image360{
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
 #about{
 	background-color: #26b3ff;
 	width: 100%;
@@ -348,6 +354,12 @@ form .enviar:hover{
 }
 /*widescreens*/
 @media screen and (min-width: 1280px){
+#image360{
+	display: block;
+}
+#conteudoInicial{
+	display: none;
+}
 #btn-menu{
 	display: none;
 }
