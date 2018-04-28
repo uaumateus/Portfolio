@@ -123,13 +123,14 @@
 		font-size: 3em;
 	}
 	#works{
-		height: 90%;
+		height: 1000px;
 		padding-left: 2%;
 	}
 	#works .job{
 		float: left;
 		width: 30%;
 		margin-left: 2%;
+		margin-bottom: 90px;
 	}
 	#contact{
 		height: 600px;
