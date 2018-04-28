@@ -123,7 +123,7 @@ var camera, scene, renderer;
         renderer.setSize( window.innerWidth, window.innerHeight );
       }
       function onDocumentMouseDown( event ) {
-        event.preventDefault();
+        //event.preventDefault();
         isUserInteracting = true;
         onMouseDownMouseX = event.clientX;
         onMouseDownMouseY = event.clientY;
