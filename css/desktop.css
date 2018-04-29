@@ -123,7 +123,7 @@
 		font-size: 3em;
 	}
 	#works{
-		height: 1000px;
+		height: 1050px;
 		padding-left: 2%;
 	}
 	#works .job{
@@ -158,5 +158,31 @@
 		font-size: 4em;
 		display: block;
 	}
-
+	#about #curiosidades{
+		padding-top: 50px;
+	}
+	#about #curiosidades li{
+ 		font-size: 1.2em;
+	}
+	#about #beer, #phone, #mobile{
+		display: block;
+		color: #fff;
+		font-size: 5em;
+		float: right;
+	}
+	#about #beer{
+		padding-top: 100px;
+		padding-right: 25%;
+	}
+	#about #phone{
+		padding-top: 200px;
+		margin-right: -180px;
+	}
+	#about #mobile{
+		padding-top: 300px;
+		margin-right: 10px;
+	}
+	#about #titleCuriosidades{
+		padding-top: 10px;
+	}
 }
