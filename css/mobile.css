@@ -14,6 +14,7 @@
 }
 #menu li{
 	padding: 2%;
+	list-style-type: none;
 }
 #menu li a{
 	font-size: 1.2em;
@@ -160,7 +161,7 @@
 }
 #works{
 	background-color: #1ad8cf;
-	padding-bottom: 70px; 
+	padding-bottom: 10px; 
 	text-align: center;
 }
 #contact{
@@ -323,6 +324,25 @@ form .enviar:hover{
 	margin-left: 7.5%;
 }
 
- #works .job:hover .opacidade{
+#works .job:hover .opacidade{
  	background-color: rgba(0,0,0,0.5);
- }
+}
+
+#about #curiosidades{
+ 	padding: 10%;
+}
+
+#about #curiosidades li{
+	list-style-type: none;
+	color: #4f4f51;
+	padding-bottom: 12px;
+}
+
+#about #curiosidades i{
+	color: #fff;
+	margin-left: -10px;
+	padding-right: 5px;
+}
+#about #beer, #mobile, #phone{
+	display: none;
+}
