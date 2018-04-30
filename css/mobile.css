@@ -157,7 +157,7 @@
 
 #skills{
 	background-color: #1cdcff;
-	height: 500px;
+	padding-top: 80px;
 }
 #works{
 	background-color: #1ad8cf;
@@ -344,5 +344,26 @@ form .enviar:hover{
 	padding-right: 5px;
 }
 #about #beer, #mobile, #phone{
+	display: none;
+}
+#skills h1{
+	font-size: 1.8em;
+	font-family: 'Philosopher', sans-serif;
+	color: #fff;
+	text-align: center;
+}
+#skills ul{
+	padding: 10%;
+}
+#skills li{
+	list-style-type: none;
+	color: #4f4f51;
+	padding-bottom: 12px;
+}
+#skills li i{
+	padding-right: 10px;
+	color: #fff;
+}
+#skills #iconPC, #iconAndroid{
 	display: none;
 }
