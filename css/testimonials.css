@@ -6,7 +6,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 20px 40px 70px;
-  z-index: 1;
 }
 .cd-testimonials-wrapper::after {
   /* quotation mark */
@@ -39,7 +38,7 @@
   }
   .cd-testimonials-wrapper {
     margin-top: 1px;
-    margin-left: 20%;
+    margin-left: 25%;
     float: left;
   }
 }
