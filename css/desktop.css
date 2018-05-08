@@ -1,11 +1,8 @@
 /*widescreens*/
 @media screen and (min-width: 1280px){
-	#image360{
-		display: block;
-	}
-	#conteudoInicial{
-		display: none;
-	}
+
+	/* MENU */
+
 	#btn-menu{
 		display: none;
 	}
@@ -15,9 +12,6 @@
 	.cabecalho{
 		background-color: inherit;
 		padding: 0 4%;
-	}
-	#home{
-		cursor: move;
 	}
 	#logo{
 		color: #fff;
@@ -49,12 +43,6 @@
 	#menu li a:hover{
 		border: none;
 	}
-	#home img{
-		width: 200px;
-	}
-	#conteudoInicial{
-		margin-top: 6%; 
-	}
 	#menu .active{
 		background-color: #26b3ff;
 		transition: 0.7s background-color;
@@ -67,7 +55,28 @@
 	#menu .active a{
 		color: #fff !important;
 		transition: 1s color;
-	} 
+	}
+
+	/* PÁGINA INICIAL */
+
+	#home img{
+		width: 200px;
+	}
+	#conteudoInicial{
+		margin-top: 6%; 
+	}
+	#home{
+		cursor: move;
+	}
+	#image360{
+		display: block;
+	}
+	#conteudoInicial{
+		display: none;
+	}
+	 
+	/* MUDANÇA DE CORES POR PÁGINA */
+
 	.home .active{
 		background-color: #26b3ff !important;
 	}
@@ -103,6 +112,9 @@
 		transition: 1s color;
 		color: #22e8a6 !important;
 	}
+
+	/* PÁGINA SOBRE */
+
 	#about img{
 		width: 25%;
 		float: left;
@@ -118,45 +130,6 @@
 	#about h5{
 		font-size: 1.2em;
 		padding-left: 34%;
-	}
-	#works h1{
-		font-size: 3em;
-	}
-	#works{
-		height: 1050px;
-		padding-left: 2%;
-	}
-	#works .job{
-		float: left;
-		width: 30%;
-		margin-left: 2%;
-		margin-bottom: 90px;
-	}
-	#contact{
-		height: 600px;
-	}
-	#contact h2{
-		font-size: 2.8em;
-	}
-	#contact form{
-		text-align: center;
-		width: 40%;
-		position: center;
-	}
-	#contact #textForm{
-		float: left;
-		padding: 50px 0 0 100px;
-		font-size: 1.2em;
-	}
-	#contact form{
-		float:right;
-		margin-right: 100px;
-		padding-top: 30px;
-	}
-	#contact #textForm i{
-		color: #fff;
-		font-size: 4em;
-		display: block;
 	}
 	#about #curiosidades{
 		padding-top: 50px;
@@ -185,6 +158,64 @@
 	#about #titleCuriosidades{
 		padding-top: 10px;
 	}
+
+	/* PÁGINA TRABALHOS */
+
+	#works h1{
+		font-size: 3em;
+	}
+	#works{
+		height: 1050px;
+		padding-left: 2%;
+	}
+	#works .job{
+		float: left;
+		width: 30%;
+		margin-left: 2%;
+		margin-bottom: 90px;
+	}
+	#works h3{
+		padding-top: 35px;
+		font-size: 2.4em;
+	}
+
+	#works h2{
+		width: 25%;
+		padding-top: 90px;
+		font-size: 1.3em;
+	}
+
+	/* PÁGINA CONTATO */
+
+	#contact{
+		height: 600px;
+	}
+	#contact h2{
+		font-size: 2.8em;
+	}
+	#contact form{
+		text-align: center;
+		width: 40%;
+		position: center;
+	}
+	#contact #textForm{
+		float: left;
+		padding: 50px 0 0 100px;
+		font-size: 1.2em;
+	}
+	#contact form{
+		float:right;
+		margin-right: 100px;
+		padding-top: 30px;
+	}
+	#contact #textForm i{
+		color: #fff;
+		font-size: 4em;
+		display: block;
+	}
+	
+	/* PÁGINA SKILLS */
+
 	#skills h1{
 		font-size: 2.5em;
 		font-family: 'Philosopher', sans-serif;
