@@ -1,5 +1,5 @@
 /*widescreens*/
-@media screen and (min-width: 1280px){
+@media screen and (min-width: 1080px){
 
 	/* MENU */
 
@@ -10,7 +10,8 @@
 		display: none;
 	}
 	.cabecalho{
-		background-color: inherit;
+		background: rgba(0,0,0,0.1);
+		box-shadow: 1px 1px 10px 10px rgba(0,0,0,0.1);
 		padding: 0 4%;
 	}
 	#logo{
@@ -21,9 +22,9 @@
 		height: 56px;
 		line-height: 56px;
 		float: right;
-		display: block;
+		display: block !important;
 		position: static;
-		background-color: inherit;
+		background: rgba(0,0,0,0);
 	}
 	#menu li{
 		padding: 0;
@@ -133,6 +134,7 @@
 	}
 	#about #curiosidades{
 		padding-top: 50px;
+		text-align: left;
 	}
 	#about #curiosidades li{
  		font-size: 1.2em;
@@ -180,9 +182,9 @@
 	}
 
 	#works h2{
-		width: 25%;
+		width: 28%;
 		padding-top: 90px;
-		font-size: 1.3em;
+		font-size: 1.2em;
 	}
 
 	/* PÁGINA CONTATO */
@@ -235,7 +237,7 @@
 		color: #fff;
 		float: right;
 		margin-top: -130px;
-		margin-right: 210px;
+		margin-right: 160px;
 	}
 	#skills #iconAndroid{
 		display: block;
@@ -243,6 +245,20 @@
 		color: #fff;
 		float: right;
 		margin-top: -110px;
+		margin-right: 160px;
+	}
+}
+
+@media screen and (min-width: 1280px){
+	#skills #iconPC{
 		margin-right: 210px;
+	}
+	#skills #iconAndroid{
+		margin-right: 210px;
+	}
+	#works h2{
+		width: 25%;
+		padding-top: 90px;
+		font-size: 1.3em;
 	}
 }

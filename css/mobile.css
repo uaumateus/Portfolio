@@ -110,7 +110,7 @@
 }
 
 #btn-ir{
-	padding: 3% 5%;
+	padding: 10px 15px;
 	border: 1px solid #fff; 
 	background-color: #2680ff;
 	border-radius: 10px;
@@ -390,3 +390,43 @@ footer i:hover{
 	color: #fff;
 }
 
+@media screen and (min-width: 450px){
+	#conteudoInicial img{
+		width: 150px;
+	}
+	#conteudoInicial{
+		margin-top: 18%; 
+	}
+	#about{
+		text-align: center;
+	}
+	#about img{
+		width: 250px;
+		margin-left: 0;
+	}
+	#skills #iconPC, #iconAndroid{
+		display: block;
+		font-size: 7em;
+		color: #fff;
+		float: right;
+		margin-top: -100px; 
+	}
+	#skills #iconPC{
+		margin-top: -60px;
+	}
+	#works{
+		height: 1600px;
+	}
+}
+
+@media screen and (min-width: 600px){
+	#works .job{
+		float: left;
+		width: 40%;
+		margin-left: 7%;
+		margin-bottom: 20px;
+	}
+	#works{
+		height: 1200px;
+	}
+	}
