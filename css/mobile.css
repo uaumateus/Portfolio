@@ -429,4 +429,11 @@ footer i:hover{
 	#works{
 		height: 1200px;
 	}
+	#works h3{
+		padding-top: 15px;
 	}
+	#works h2{
+		width: 35%;
+		padding-top: 60px;
+	}
+}
