@@ -1,8 +1,5 @@
-/*widescreens*/
 @media screen and (min-width: 1080px){
-
 	/* MENU */
-
 	#btn-menu{
 		display: none;
 	}
@@ -10,12 +7,17 @@
 		display: none;
 	}
 	.cabecalho{
-		background: rgba(0,0,0,0.1);
-		box-shadow: 1px 1px 10px 10px rgba(0,0,0,0.1);
+		background: none;
 		padding: 0 4%;
 	}
-	#logo{
-		color: #fff;
+	#logoDesktop{
+		display: block;
+		float: left;
+		width: 200px;
+		margin-top: -50px;
+	}
+	#logoMobile{
+		display: none;
 	}
 	#menu{
 		width: auto;
@@ -35,7 +37,7 @@
 		width: 105px;
 		border-radius: 0 0 50px 50px;
 		height: 70px;
-		transition: 0.5s height;
+		transition: 0.5s height, 0.5s padding;
 	}
 	#menu li:hover{
 		height: 85px;
@@ -71,6 +73,8 @@
 	}
 	#image360{
 		display: block;
+		width: 100%;
+		overflow: hidden;
 	}
 	#conteudoInicial{
 		display: none;
@@ -187,6 +191,10 @@
 		font-size: 1.2em;
 	}
 
+	.imgJog img{
+		margin-top: -80px;
+	}
+
 	/* PÁGINA CONTATO */
 
 	#contact{
@@ -249,6 +257,8 @@
 	}
 }
 
+
+
 @media screen and (min-width: 1280px){
 	#skills #iconPC{
 		margin-right: 210px;
@@ -262,3 +272,4 @@
 		font-size: 1.3em;
 	}
 }
+

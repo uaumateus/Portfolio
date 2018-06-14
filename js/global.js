@@ -17,150 +17,147 @@ jQuery(document).ready(function($) {
 
 	// Cache selectors
 	var lastId,
-    topMenu = $("#menu"),
-    topMenuHeight = 0,
-    // All list items
-    menuItems = topMenu.find("a"),
-    // Anchors corresponding to menu items
-    scrollItems = menuItems.map(function(){
-      var item = $($(this).attr("href"));
-      if (item.length) { return item; }
+  topMenu = $("#menu"),
+  topMenuHeight = 0,
+  // All list items
+  menuItems = topMenu.find("a"),
+  // Anchors corresponding to menu items
+  scrollItems = menuItems.map(function(){
+    var item = $($(this).attr("href"));
+    if (item.length) { return item; }
+  });
+
+  // Bind click handler to menu items
+  // so we can get a fancy scroll animation
+  menuItems.click(function(e){
+    var href = $(this).attr("href"),
+        offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+    $('html, body').stop().animate({ 
+        scrollTop: offsetTop
+    }, 300);
+    e.preventDefault();
+  });
+
+  // Bind to scroll
+  $(window).scroll(function(){
+    // Get container scroll position
+    var fromTop = $(this).scrollTop()+topMenuHeight;
+    
+    // Get id of current scroll item
+    var cur = scrollItems.map(function(){
+      if ($(this).offset().top < fromTop)
+        return this;
     });
+    // Get the id of the current element
+    cur = cur[cur.length-1];
+    var id = cur && cur.length ? cur[0].id : "";
+    
+    if (lastId !== id) {
+        lastId = id;
+        // Set/remove active class
+        menuItems
+          .parent().removeClass("active")
+          .end().filter("[href='#"+id+"']").parent().addClass("active");
+        $("#menu").removeClass().addClass(id);
+    }                   
+  });
 
-// Bind click handler to menu items
-// so we can get a fancy scroll animation
-menuItems.click(function(e){
-  var href = $(this).attr("href"),
-      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
-  $('html, body').stop().animate({ 
-      scrollTop: offsetTop
-  }, 300);
-  e.preventDefault();
+  // Get the modal
+  var modal = document.getElementById('myModal');
+
+  // Get the button that opens the modal
+  var call1 = document.getElementsByClassName("callModal")[0];
+  var call2 = document.getElementsByClassName("callModal")[1];
+  var call3 = document.getElementsByClassName("callModal")[2];
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on the button, open the modal 
+  call1.onclick = function() {
+      modal.style.display = "block";
+  }
+  call2.onclick = function() {
+    modal.style.display = "block";
+  }
+  call3.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+      modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+
+
+  var btnWeb = document.getElementById('btn-web');
+  var btnAndroid = document.getElementById('btn-android');
+  var listWeb = document.getElementById('listWeb');
+  var listAndroid = document.getElementById('listAndroid');
+  
+  btnWeb.onclick = function() {
+    listAndroid.style.display = "none";
+    listWeb.style.display = "block";
+    btnAndroid.className = "";
+    btnWeb.className = "active";
+  }
+  btnAndroid.onclick = function() {
+    listAndroid.style.display = "block";
+    listWeb.style.display = "none";
+    btnAndroid.className = "active";
+    btnWeb.className = "";
+  }
+
+  // Debounce do Lodash
+debounce = function(func, wait, immediate) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		var later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
+
+
+(function(){
+	var $target = $('.anime'),
+			animationClass = 'anime-start',
+			offset = $(window).height() * 3/4;
+
+	function animeScroll() {
+		var documentTop = $(document).scrollTop();
+
+		$target.each(function(){
+			var itemTop = $(this).offset().top;
+			if (documentTop > itemTop - offset) {
+				$(this).addClass(animationClass);
+			} else {
+				$(this).removeClass(animationClass);
+			}
+		});
+	}
+
+	animeScroll();
+
+	$(document).scroll(debounce(function(){
+		animeScroll();
+	}, 1));
+})();
 });
 
-// Bind to scroll
-$(window).scroll(function(){
-   // Get container scroll position
-   var fromTop = $(this).scrollTop()+topMenuHeight;
-   
-   // Get id of current scroll item
-   var cur = scrollItems.map(function(){
-     if ($(this).offset().top < fromTop)
-       return this;
-   });
-   // Get the id of the current element
-   cur = cur[cur.length-1];
-   var id = cur && cur.length ? cur[0].id : "";
-   
-   if (lastId !== id) {
-       lastId = id;
-       // Set/remove active class
-       menuItems
-         .parent().removeClass("active")
-         .end().filter("[href='#"+id+"']").parent().addClass("active");
-       $("#menu").removeClass().addClass(id);
-   }                   
-});
 
 
 
-var camera, scene, renderer;
-      var isUserInteracting = false,
-      onMouseDownMouseX = 0, onMouseDownMouseY = 0,
-      lon = 0, onMouseDownLon = 0,
-      lat = 0, onMouseDownLat = 0,
-      phi = 0, theta = 0;
-      init();
-      animate();
-      function init() {
-        var container, mesh;
-        container = document.getElementById( 'image360' );
-        camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 1100 );
-        camera.target = new THREE.Vector3( 0, 0, 0 );
-        scene = new THREE.Scene();
-        var geometry = new THREE.SphereBufferGeometry( 500, 60, 40 );
-        // invert the geometry on the x-axis so that all of the faces point inward
-        geometry.scale( - 1, 1, 1 );
-        var material = new THREE.MeshBasicMaterial( {
-          map: new THREE.TextureLoader().load( 'img/image360.jpg' )
-        } );
-        mesh = new THREE.Mesh( geometry, material );
-        scene.add( mesh );
-        renderer = new THREE.WebGLRenderer();
-        renderer.setPixelRatio( window.devicePixelRatio );
-        renderer.setSize( window.innerWidth, window.innerHeight );
-        container.appendChild( renderer.domElement );
-        document.addEventListener( 'mousedown', onDocumentMouseDown, false );
-        document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-        document.addEventListener( 'mouseup', onDocumentMouseUp, false );
-        //
-        document.addEventListener( 'dragover', function ( event ) {
-          event.preventDefault();
-          event.dataTransfer.dropEffect = 'copy';
-        }, false );
-        document.addEventListener( 'dragenter', function ( event ) {
-          document.body.style.opacity = 0.5;
-        }, false );
-        document.addEventListener( 'dragleave', function ( event ) {
-          document.body.style.opacity = 1;
-        }, false );
-        document.addEventListener( 'drop', function ( event ) {
-          event.preventDefault();
-          var reader = new FileReader();
-          reader.addEventListener( 'load', function ( event ) {
-            material.map.image.src = event.target.result;
-            material.map.needsUpdate = true;
-          }, false );
-          reader.readAsDataURL( event.dataTransfer.files[ 0 ] );
-          document.body.style.opacity = 1;
-        }, false );
-        //
-        window.addEventListener( 'resize', onWindowResize, false );
-      }
-      function onWindowResize() {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize( window.innerWidth, window.innerHeight );
-      }
-      function onDocumentMouseDown( event ) {
-        //event.preventDefault();
-        isUserInteracting = true;
-        onMouseDownMouseX = event.clientX;
-        onMouseDownMouseY = event.clientY;
-        onMouseDownLon = lon;
-        onMouseDownLat = lat;
-      }
-      function onDocumentMouseMove( event ) {
-        if ( isUserInteracting === true ) {
-          lon = ( onMouseDownMouseX - event.clientX ) * 0.1 + onMouseDownLon;
-          lat = ( event.clientY - onMouseDownMouseY ) * 0.1 + onMouseDownLat;
-        }
-      }
-      function onDocumentMouseUp( event ) {
-        isUserInteracting = false;
-      }
-
-      function animate() {
-        requestAnimationFrame( animate );
-        update();
-      }
-      function update() {
-        if ( isUserInteracting === false ) {
-          lon += 0.1;
-        }
-        lat = Math.max( - 85, Math.min( 85, lat ) );
-        phi = THREE.Math.degToRad( 90 - lat );
-        theta = THREE.Math.degToRad( lon );
-        camera.target.x = 500 * Math.sin( phi ) * Math.cos( theta );
-        camera.target.y = 500 * Math.cos( phi );
-        camera.target.z = 500 * Math.sin( phi ) * Math.sin( theta );
-        camera.lookAt( camera.target );
-        /*
-        // distortion
-        camera.position.copy( camera.target ).negate();
-        */
-        renderer.render( scene, camera );
-      }
-});
-
-		
