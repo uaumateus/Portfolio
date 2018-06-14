@@ -34,12 +34,13 @@
 	position: fixed;
 	z-index: 10 !important;
 }
-#logo{
+#logoDesktop{
+	display: none;
+}
+#logoMobile{
 	float: left;
-	font-family: 'Philosopher', sans-serif;
-	font-size: 1.8em;
-	padding-top: 1%;
-	color: #2680ff;
+	width: 50px;
+	margin-top: 2px;
 }
 #btn-menu{
 	width: 40px;
@@ -221,24 +222,26 @@
 	padding: 2px 0 2px 0;
 	width: 65px;
 	border: 1px solid #fff;
+	background: none;
 	color: #fff;
 }
 
+#works .active{
+	color: #1ad8cf !important;
+	background: #fff !important;
+}
+
 #works #btn-web{
-	background-color: #fff;
-	color: #1ad8cf;
 	border-radius: 50px 0 0 50px;
 }
 
 #works #btn-android{
-	background-color: #1ad8cf;
-	color: #fff;
 	border-radius: 0 50px 50px 0;
 }
 
 #works img{
 	width: 100%;
-	transition: 1s opacity;
+	transition: 0.5s opacity;
 	z-index: 1;
 }
 
@@ -248,7 +251,7 @@
 	padding-top: 25px;
 	font-size: 1.8em;
 	opacity: 0;
-	transition: 1s opacity;
+	transition: 0.5s opacity;
 	z-index: 6;
 }
 
@@ -260,7 +263,7 @@
 	padding-top: 65px;
 	font-size: 1em;
 	opacity: 0;
-	transition: 1s opacity;
+	transition: 0.5s opacity;
 	z-index: 5;
 }
 
@@ -272,6 +275,15 @@
 	color: #26b3ff;
 	margin-left: 7.5%;
 	z-index: 1;
+	cursor: pointer;
+}
+
+#works button{
+	cursor: pointer;
+}
+
+#works #listAndroid{
+	display: none;
 }
 
 #works .job:hover img{
@@ -284,6 +296,81 @@
 #works .job:hover h2{
  	opacity: 1;
 }
+
+/* MODALS */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 15; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+	background-color: #2680ff;
+	width: 100%; 
+	height: 100%;
+	overflow: hidden;
+}
+
+.close {
+	color: #fff;
+	font-size: 25px;
+	margin-top: 10px;
+	margin-left: -40px;
+	font-weight: bold;
+	position: absolute;
+	transition: color 0.5s;
+}
+
+.close:hover,
+.close:focus {
+	color: #2680ff;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.imgJog{
+	width: 100%;
+	height: 100px;
+	overflow: hidden;
+	float: left;
+	margin-bottom: 30px;
+	border-bottom: 2px solid #1ad8cf;
+	box-shadow: 1px 1px 15px 0 rgba(0,0,0,0.3);
+}
+
+.imgJog img{
+	margin-top: -50px;
+}
+
+.modal p{
+	margin: 30px;
+	text-align: left;
+	color: #fff;
+}
+
+.modal button{
+	background: none;
+	border: 2px solid #fff;
+	color: #fff;
+	padding: 5px 15px;
+	border-radius: 50px;
+	transition: background 0.5s, color 0.5s, border 0.5s;
+	margin-bottom: 30px;
+	cursor: pointer;
+}
+.modal button:hover{
+	background: #1ad8cf;
+	border: 2px solid #1ad8cf;
+	color: #fff;
+}
+
 
 /* PÁGINA CONTATO */
 #contact{
@@ -326,7 +413,7 @@ form textarea{
 	border-radius: 10px;
 	padding: 5px 10px;
 	margin-top: 10px;
-	border: 1.5px solid #2680ff;
+	border: 2px solid #2680ff;
 	color: #4f4f51;
 }
 
@@ -335,28 +422,25 @@ form .formulario{
 	padding: 5px 10px;
 	border-radius: 20px;
 	margin-top: 10px;
-	border: 1.5px solid #2680ff;
+	border: 2px solid #2680ff;
 	color: #4f4f51;
 }
 
 form .enviar{
 	padding: 5px 15px;
-	background-color: #fff;
-	color: #2680ff;
-	border: 1px solid #2680ff;
-	border-radius: 10px;
+	background: none;
+	color: #fff;
+	border: 2px solid #fff;
+	border-radius: 50px;
 	cursor: pointer;
 	text-decoration: none;
 	font-family: 'Philosopher', sans-serif;
-	font-size: 1.2em;
-	transition: 0.5s color;
-	transition: 0.5s background-color;
-	transition: 0.5s border;
+	font-size: 1.3em;
+	transition: 0.5s background, 0.5s border;
 }
 form .enviar:hover{
-	border: 1px solid #fff; 
-	background-color: #2680ff;
-	color: #fff;
+	background: #26b3ff;
+	border: 2px solid #26b3ff;
 }
 
 /* RODAPÉ */
@@ -435,5 +519,14 @@ footer i:hover{
 	#works h2{
 		width: 35%;
 		padding-top: 60px;
+	}
+	.modal-content {
+		margin: 5% auto;
+		width: 80%; 
+		height: auto;
+		border-radius: 10px;
+	}
+	.imgJog{
+		height: 200px;
 	}
 }
