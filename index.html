@@ -4,9 +4,9 @@
 	<meta charset="utf-8">
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="js/global.js"></script>
-	<script type="text/javascript" src="js/three.min.js"></script>
+	<script type="text/javascript" src="lib/three.min.js"></script>
 	<script type="text/javascript" src="js/image360.js"></script>
-	<script src="js/jquery.flexslider-min.js"></script>
+	<script src="lib/jquery.flexslider-min.js"></script>
 	<script src="js/testimonials.js"></script>
 	<title>Portfólio</title>
 	<link rel="stylesheet" type="text/css" href="css/global.css">
@@ -76,12 +76,14 @@
 	<section id="skills">
 		<h1 class="anime">Minhas Habilidades</h1><br/>
 		<h1 class="anime"><i class="fas fa-globe"></i> WEB</h1>
-		<ul>
-			<li class="anime"><i class="far fa-hand-point-right"></i>HTML5</li>
-			<li class="anime"><i class="far fa-hand-point-right"></i>CSS3</li>
-			<li class="anime"><i class="far fa-hand-point-right"></i>JavaScript</li>
-			<li class="anime"><i class="far fa-hand-point-right"></i>JQuery</li>
-			<i class="fas fa-desktop anime" id="iconPC"></i>
+		<ul id="grid-skills">
+			<div class="esquerda">
+				<li class="anime"><i class="far fa-hand-point-right"></i>HTML5</li>
+				<li class="anime"><i class="far fa-hand-point-right"></i>CSS3</li>
+				<li class="anime"><i class="far fa-hand-point-right"></i>JavaScript</li>
+				<li class="anime"><i class="far fa-hand-point-right"></i>JQuery</li>
+			</div>
+			<i class="fas fa-desktop anime" id="iconPC"></i>			
 			<div class="direita">
 				<li class="anime"><i class="far fa-hand-point-right"></i>P5.js</li>
 				<li class="anime"><i class="far fa-hand-point-right"></i>PHP</li>
@@ -90,11 +92,14 @@
 			</div>
 		</ul>
 		<h1 class="anime"><i class="fas fa-mobile-alt anime"></i> ANDROID</h1>
-		<ul>
-			<li class="anime"><i class="far fa-hand-point-right"></i>Android Studio</li>
-			<li class="anime"><i class="far fa-hand-point-right"></i>Java</li>
-			<li class="anime"><i class="far fa-hand-point-right"></i>XML</li>
+		<ul id="grid-skills">
+			<div class="esquerda">
+				<li class="anime"><i class="far fa-hand-point-right"></i>Android Studio</li>
+				<li class="anime"><i class="far fa-hand-point-right"></i>Java</li>
+				<li class="anime"><i class="far fa-hand-point-right"></i>XML</li>
+			</div>
 			<i class="fab fa-android anime" id="iconAndroid"></i>
+			<div></div>
 		</ul>
 	</section>
 
@@ -108,21 +113,21 @@
 				<i class="fas fa-ellipsis-h" id="fone"></i>
 				<h3>SmartEar</h3>
 				<h2>SmartEar é uma aplicação web para o ensino de teoria musical.</h2>
-				<img src="img/smartEar.png">
+				<img src="img/Trabalhos/smartEar.png">
 				<i class="fas fa-stop-circle"></i>
 			</div>
 			<div class="job callModal">
 				<i class="fas fa-ellipsis-h" id="fone"></i>
-				<h3>SmartEar</h3>
-				<h2>SmartEar é uma aplicação web para o ensino de teoria musical.</h2>
-				<img src="img/smartEar.png">
+				<h3>UFCine</h3>
+				<h2>UFCine é uma plataforma de filme do curso de Cinema da UFC.</h2>
+				<img src="img/Trabalhos/UFCine.png">
 				<i class="fas fa-stop-circle"></i>
 			</div>
 			<div class="job callModal">
 				<i class="fas fa-ellipsis-h" id="fone"></i>
-				<h3>SmartEar</h3>
-				<h2>SmartEar é uma aplicação web para o ensino de teoria musical.</h2>
-				<img src="img/smartEar.png">
+				<h3>Portfólio</h3>
+				<h2>Meu portfólio pessoal.</h2>
+				<img src="img/Trabalhos/portfolio.png">
 				<i class="fas fa-stop-circle"></i>
 			</div>
 		</div>
@@ -136,10 +141,10 @@
 			</div>
 		</div>
 		<!-- MODALS -->
-		<div id="myModal" class="modal">
+		<div id="modal1" class="modal">
 			<div class="modal-content">
 				<div id="modal-job">
-					<article class="imgJog"><img src="img/smartEar.png"></article>
+					<article class="imgJog"><img src="img/Trabalhos/smartEar.png"></article>
 					<span class="close"><i class="fa fa-times"></i></span><br/>
 					<p>Smart Ear é um aplicativo desenvolvido pela equipe Now Loading, do qual fiz parte no 2º semestre no curso de Sistemas e Mídias Digitais, da Universidade Federal do Ceará. O aplicativo faz parte do 2º Projeto Integrado do curso, que visa tornar os universitários mais próximos do mercado de trabalho, tendo que desenvolver aplicações para um cliente específico.
 						A aplicação tem como função o ensino da teoria musical de uma forma lúdica e dinâmica, através de tarefas e mini-jogos.</p>
@@ -149,38 +154,63 @@
 				</div>
 			</div>
 		</div>
+		<div id="modal2" class="modal">
+			<div class="modal-content">
+				<div id="modal-job">
+					<article class="imgJog"><img src="img/Trabalhos/UFCine.png"></article>
+					<span class="close"><i class="fa fa-times"></i></span><br/>
+					<p>UFCine é uma plataforma online de straming de filmes produzidos no curso de Cinema e Audiovisual da Universidade Federal do Ceará.
+							Além dos filmes, o sistema ainda dá acesso aos portólios dos alunos do curso.</p>
+					<p>Função: Programação front-end.<br/>
+						Linguagens utilizadas: HTML, CSS, JavaScript</p>
+					<a href="https://nowloadingsmd.github.io/smartEar/" target="_blank"><button>Acesse aqui!</button></a>
+				</div>
+			</div>
+		</div>
+		<div id="modal3" class="modal">
+			<div class="modal-content">
+				<div id="modal-job">
+					<article class="imgJog"><img src="img/Trabalhos/portfolio.png"></article>
+					<span class="close"><i class="fa fa-times"></i></span><br/>
+					<p>Este é o site do meu portfólio pessoal, que demonstra um pouco da minha tragetória profissional.</p>
+					<p>Função: Designer e Desenvolvedor.<br/>
+						Linguagens utilizadas: HTML, CSS, JavaScript</p>
+					<a href="https://uaumateus.github.io/Portfolio/" target="_blank"><button>Acesse aqui!</button></a>
+				</div>
+			</div>
+		</div>
 		
 		<div class="cd-testimonials-wrapper cd-container">
 			<h1 class="anime">Depoimentos</h1>
 			<ul class="cd-testimonials">
 				<li>
-					<p class="anime">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p class="anime">Profissional atencioso e muito prestativo.</p>
 					<div class="cd-author anime">
-						<img src="img/depoiment.png" alt="Author image" class="anime">
+						<img src="img/Depoimentos/Camila.jpg" alt="Author image" class="anime">
 						<ul class="cd-author-info">
-							<li class="anime">MyName</li>
+							<li class="anime">Camila Freitas</li>
 							<li class="anime">CEO, AmberCreative</li>
 						</ul>
 					</div>
 				</li>
 
 				<li>
-					<p class="anime">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ea, perferendis error repudiandae numquam dolor fuga temporibus. Unde omnis, consequuntur.</p>
+					<p class="anime">Extremamente dedicado e super engajado em suas tarefas.</p>
 					<div class="cd-author">
-						<img src="img/depoiment.png" alt="Author image" class="anime">
+						<img src="img/Depoimentos/Ícaro.jpg" alt="Author image" class="anime">
 						<ul class="cd-author-info">
-							<li class="anime">MyName</li>
+							<li class="anime">Ícaro Souza</li>
 							<li class="anime">Designer, CodyHouse</li>
 						</ul>
 					</div>
 				</li>
 
 				<li>
-					<p class="anime">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam totam nulla est, illo molestiae maxime officiis, quae ad, ipsum vitae deserunt molestias eius alias.</p>
+					<p class="anime">Excelente profissional, sempre muito minucioso em tudo que faz.</p>
 					<div class="cd-author">
-						<img src="img/depoiment.png" alt="Author image" class="anime">
+						<img src="img/Depoimentos/Victoria.jpg" alt="Author image" class="anime">
 						<ul class="cd-author-info">
-							<li class="anime">MyName</li>
+							<li class="anime">Victória Lima</li>
 							<li class="anime">CEO, CompanyName</li>
 						</ul>
 					</div>
