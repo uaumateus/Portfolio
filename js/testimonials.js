@@ -1,5 +1,4 @@
 jQuery(document).ready(function($){
-	//create the slider
 	$('.cd-testimonials-wrapper').flexslider({
 		selector: ".cd-testimonials > li",
 		animation: "slide",
