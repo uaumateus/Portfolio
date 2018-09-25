@@ -7,8 +7,15 @@
 		display: none;
 	}
 	.cabecalho{
-		background: none;
+		background: rgba(0, 0, 0, 0);
+		transition: 0.5s background;
 		padding: 0 4%;
+	}
+	#logo{
+		font-family: 'Amatic SC', cursive;
+		color: #fff;
+		text-decoration: none;
+		font-size: 2.5em;
 	}
 	#logoDesktop{
 		display: block;
@@ -32,27 +39,28 @@
 		padding: 0;
 		float: left;
 		list-style-type: none;
-		background-color: #fff;
+		/* background-color: #fff; */
 		margin-left: 15px;
 		width: 105px;
-		border-radius: 0 0 50px 50px;
-		height: 70px;
-		transition: 0.5s height, 0.5s padding;
+		/* border-radius: 0 0 50px 50px; */
+		height: 56px;
+		/* transition: 0.5s height, 0.5s padding; */
 	}
-	#menu li:hover{
+	/* #menu li:hover{
 		height: 85px;
 		padding-top: 10px;
+	} */
+	#menu li a{
+		color: #fff;
 	}
 	#menu li a:hover{
 		border: none;
 	}
 	#menu .active{
-		background-color: #26b3ff;
-		transition: 0.7s background-color;
-		height: 85px;
-		transition: 0.5s height;
-		padding-top: 10px;
-		transition: 0.5s padding-top;
+		/* height: 85px; */
+		/* transition: 0.5s height; */
+		/* padding-top: 10px; */
+		/* transition: 0.5s padding-top; */
 		transition: 0.5s background-color;
 	}
 	#menu .active a{
@@ -83,19 +91,19 @@
 	/* MUDANÇA DE CORES POR PÁGINA */
 
 	.home .active{
-		background-color: #26b3ff !important;
-	}
-	.about .active{
 		background-color: #2680ff !important;
 	}
-	.skills .active{
+	.about .active{
 		background-color: #26b3ff !important;
 	}
+	.skills .active{
+		background-color: #1cdcff !important;
+	}
 	.works .active{
-		background-color: #22e8a6 !important;
+		background-color: #1ad8cf !important;
 	}
 	.contact .active{
-		background-color: #1ad8cf !important;
+		background-color: #22e8a6 !important;
 	}
 	.home li a{
 		transition: 1s color;
@@ -171,7 +179,7 @@
 		font-size: 3em;
 	}
 	#works{
-		height: 1050px;
+		height: 90%;
 		padding-left: 2%;
 	}
 	#works .job{

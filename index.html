@@ -15,13 +15,16 @@
 	<link rel="stylesheet" type="text/css" href="css/testimonials.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Philosopher|Roboto+Slab" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+	<div id="preloader">
+		<div id="status"></div>
+	</div>
 	<!-- CABEÇALHO/MENU-->
 	<header class="cabecalho">
-		<a href="#home" class="scroll"><img src="img/logo.png" id="logoDesktop"></a>
-		<a href="#home" class="scroll"><img src="img/logoMobile.png" id="logoMobile"></a>
+		<a href="#home" class="scroll" id="logo">Mateus Santos</a>
 		<button id="btn-menu"><i class="fa fa-bars fa-lg"></i></button>
 		<nav id="menu">
 			<a id="btn-close"><i class="fa fa-times"></i></a>
@@ -49,9 +52,9 @@
 	</div>
 	<!--PÁGINA SOBRE-->
 	<section id="about">
-		<img src="img/profile.jpg" class="anime">
+		<img src="img/profile.jpeg" class="anime">
 		<h1 class="anime">Quem é Mateus Santos?</h1><br/>
-		<h5 class="anime">Me chamo Mateus Pereira dos Santos, tenho 18 anos e resido em Cascavel-CE, cidade metropolitana de Fortaleza. Possuo curso técnico em informática atrelada ao ensino médio, porém meu contato com a programação veio antes disso, por volta dos 13 anos, quando descobri o universo do desenvolvimento web. Atualmente estou cursando Sistemas e Mídias Digitais na Universidade Federal do Ceará, curso este que além de aperfeiçoar meus conhecimentos de programação, ainda me possibilita ser um profissional muito mais completo, sendo capaz de entender e desenvolver projetos em diversas áreas da tecnologia, como design, audiovisual, redes de computadores... Durante esse meio tempo me apaixonei também pelo mundo mobile, e desde então me tornei mais focado no desenvolvimento de sistemas Web e Android.</h5>
+		<h5 class="anime">Me chamo Mateus Pereira dos Santos, tenho 18 anos e resido em Cascavel-CE, cidade metropolitana de Fortaleza. Possuo curso técnico em informática atrelada ao ensino médio, porém meu contato com a programação veio antes disso, por volta dos 13 anos, quando descobri o universo do desenvolvimento web. Atualmente estou cursando Sistemas e Mídias Digitais na Universidade Federal do Ceará, curso este que além de aperfeiçoar meus conhecimentos de programação, ainda me possibilita ser um profissional muito mais completo, sendo capaz de entender e desenvolver projetos em diversas áreas da tecnologia, como design, audiovisual, redes de computadores... Durante esse meio tempo me apaixonei também pelo mundo mobile, e desde então me tornei mais focado no desenvolvimento Full Stack de aplicações Web.</h5>
 		<h1 id="titleCuriosidades" class="anime">Algumas curiosidades...</h1>
 		<i class="fas fa-beer anime" id="beer"></i>
 		<i class="fas fa-headphones anime" id="phone"></i>
@@ -75,7 +78,7 @@
 	<!--PÁGINA HABILIDADES-->
 	<section id="skills">
 		<h1 class="anime">Minhas Habilidades</h1><br/>
-		<h1 class="anime"><i class="fas fa-globe"></i> WEB</h1>
+		<!-- <h1 class="anime"><i class="fas fa-globe"></i> WEB</h1> -->
 		<ul id="grid-skills">
 			<div class="esquerda">
 				<li class="anime"><i class="far fa-hand-point-right"></i>HTML5</li>
@@ -85,13 +88,13 @@
 			</div>
 			<i class="fas fa-desktop anime" id="iconPC"></i>			
 			<div class="direita">
-				<li class="anime"><i class="far fa-hand-point-right"></i>P5.js</li>
+				<li class="anime"><i class="far fa-hand-point-right"></i>Java</li>
 				<li class="anime"><i class="far fa-hand-point-right"></i>PHP</li>
 				<li class="anime"><i class="far fa-hand-point-right"></i>MySQL</li>
 				<li class="anime"><i class="far fa-hand-point-right"></i>PostgreSQL</li>
 			</div>
 		</ul>
-		<h1 class="anime"><i class="fas fa-mobile-alt anime"></i> ANDROID</h1>
+		<!-- <h1 class="anime"><i class="fas fa-mobile-alt anime"></i> ANDROID</h1>
 		<ul id="grid-skills">
 			<div class="esquerda">
 				<li class="anime"><i class="far fa-hand-point-right"></i>Android Studio</li>
@@ -100,14 +103,14 @@
 			</div>
 			<i class="fab fa-android anime" id="iconAndroid"></i>
 			<div></div>
-		</ul>
+		</ul> -->
 	</section>
 
 	<!--PÁGINA TRABALHOS-->
 	<section id="works">
 		<h1 class="anime">Trabalhos</h1>
-		<button id="btn-web" class="active anime">Web</button>
-		<button id="btn-android"  class="anime">Android</button><br/>
+		<!-- <button id="btn-web" class="active anime">Web</button>
+		<button id="btn-android"  class="anime">Android</button><br/> -->
 		<div id="listWeb">
 			<div class="job callModal" id="callModal1">
 				<i class="fas fa-ellipsis-h" id="fone"></i>
@@ -131,7 +134,7 @@
 				<i class="fas fa-stop-circle"></i>
 			</div>
 		</div>
-		<div id="listAndroid">
+		<!-- <div id="listAndroid">
 			<div class="job">
 				<i class="fas fa-ellipsis-h" id="fone"></i>
 				<h3>Não Encontrado</h3>
@@ -139,7 +142,7 @@
 				<img src="img/not_found.png">
 				<i class="fas fa-stop-circle"></i>
 			</div>
-		</div>
+		</div> -->
 		<!-- MODALS -->
 		<div id="modal1" class="modal">
 			<div class="modal-content">
@@ -149,7 +152,7 @@
 					<p>Smart Ear é um aplicativo desenvolvido pela equipe Now Loading, do qual fiz parte no 2º semestre no curso de Sistemas e Mídias Digitais, da Universidade Federal do Ceará. O aplicativo faz parte do 2º Projeto Integrado do curso, que visa tornar os universitários mais próximos do mercado de trabalho, tendo que desenvolver aplicações para um cliente específico.
 						A aplicação tem como função o ensino da teoria musical de uma forma lúdica e dinâmica, através de tarefas e mini-jogos.</p>
 					<p>Função: Programação back-end e front-end.<br/>
-						Linguagens utilizadas: HTML, CSS, P5.js</p>
+						Linguagens utilizadas: HTML5, CSS3, P5.js</p>
 					<a href="https://nowloadingsmd.github.io/smartEar/" target="_blank"><button>Acesse aqui!</button></a>
 				</div>
 			</div>
@@ -162,8 +165,8 @@
 					<p>UFCine é uma plataforma online de straming de filmes produzidos no curso de Cinema e Audiovisual da Universidade Federal do Ceará.
 							Além dos filmes, o sistema ainda dá acesso aos portólios dos alunos do curso.</p>
 					<p>Função: Programação front-end.<br/>
-						Linguagens utilizadas: HTML, CSS, JavaScript</p>
-					<a href="https://nowloadingsmd.github.io/smartEar/" target="_blank"><button>Acesse aqui!</button></a>
+						Linguagens utilizadas: HTML5, CSS3, JavaScript, JQuery, MongoDB</p>
+					<a href="https://cineflixsmd.herokuapp.com/" target="_blank"><button>Acesse aqui!</button></a>
 				</div>
 			</div>
 		</div>
@@ -174,13 +177,13 @@
 					<span class="close"><i class="fa fa-times"></i></span><br/>
 					<p>Este é o site do meu portfólio pessoal, que demonstra um pouco da minha tragetória profissional.</p>
 					<p>Função: Designer e Desenvolvedor.<br/>
-						Linguagens utilizadas: HTML, CSS, JavaScript</p>
+						Linguagens utilizadas: HTML5, CSS3, JavaScript, JQuery</p>
 					<a href="https://uaumateus.github.io/Portfolio/" target="_blank"><button>Acesse aqui!</button></a>
 				</div>
 			</div>
 		</div>
 		
-		<div class="cd-testimonials-wrapper cd-container">
+		<!-- <div class="cd-testimonials-wrapper cd-container">
 			<h1 class="anime">Depoimentos</h1>
 			<ul class="cd-testimonials">
 				<li>
@@ -216,7 +219,7 @@
 					</div>
 				</li>
 			</ul>
-		</div>
+		</div> -->
 	</section>
 
 	<!--PÁGINA CONTATO-->
@@ -240,9 +243,9 @@
 
 	<!--RODAPÉ / REDES SOCIAIS-->
 	<footer>
-		<a href="https://www.facebook.com/uaumateus" title="facebook.com/uaumateus" target="_blank"><i class="fab fa-facebook-f"></i></a>
+		<!-- <a href="https://www.facebook.com/uaumateus" title="facebook.com/uaumateus" target="_blank"><i class="fab fa-facebook-f"></i></a> -->
 		<a href="https://www.instagram.com/uau_mateus" title="instagram.com/uau_mateus" target="_blank"><i class="fab fa-instagram"></i></a>
-		<a href="https://twitter.com/uau_mateus" title="twitter.com/uau_mateus" target="_blank"><i class="fab fa-twitter"></i></a>
+		<a href="https://www.linkedin.com/in/uaumateus/" title="linkedin.com/in/uaumateus" target="_blank"><i class="fab fa-linkedin-in"></i>
 		<a href="https://github.com/uaumateus" title="github.com/uaumateus" target="_blank"><i class="fab fa-github"></i></a>
 		<a title="mateus.pereira99@hotmail.com"><i class="far fa-envelope"></i>
 		<p id="copyright">© Copyright 2018 - Mateus Santos</p>

@@ -1,9 +1,25 @@
 jQuery(document).ready(function($) { 
+  jQuery(window).on('load',function(){
+    jQuery("#status").fadeOut();
+    jQuery("#preloader").delay(1000).fadeOut("slow");
+  });
 	//EFEITO DE SCROLL
 	$(".scroll").click(function(event){        
 		event.preventDefault();
 		$('html,body').animate({scrollTop:$(this.hash).offset().top}, 600);
-	});
+  });
+  
+  jQuery(window).scroll(function () {
+    if (jQuery(this).scrollTop() > 1) {
+     $(".cabecalho").css('background-color', 'rgb(255,255,255)');
+     $("#logo").css('color', '#000');
+     $("#btn-menu").css('color', '#2680ff');
+    } else {
+     $(".cabecalho").css('background-color', 'rgb(0,0,0,0)');
+     $("#logo").css('color', '#fff');
+     $("#btn-menu").css('color', '#fff');
+    }
+   });
 
 	//MOSTRAR MENU MOBILE
 	$("#btn-menu").click(function(){
@@ -127,7 +143,5 @@ jQuery(document).ready(function($) {
 	}, 1));
   })();
 });
-
-
 
 
