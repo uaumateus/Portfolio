@@ -231,6 +231,9 @@
 		font-size: 4em;
 		display: block;
 	}
+	#contact form h6{
+		color: #DC143C;
+	}
 	
 	/* PÁGINA SKILLS */
 
