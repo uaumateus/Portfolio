@@ -52,9 +52,9 @@
 	</div>
 	<!--PÁGINA SOBRE-->
 	<section id="about">
-		<img src="img/profile.jpg" class="anime">
+		<img src="img/profile.jpeg" class="anime">
 		<h1 class="anime">Quem é Mateus Santos?</h1><br/>
-		<h5 class="anime">Me chamo Mateus Pereira dos Santos, tenho 19 anos e resido em Cascavel-CE, cidade metropolitana de Fortaleza. Possuo curso técnico em informática atrelada ao ensino médio, porém meu contato com a programação veio antes disso, por volta dos 13 anos, quando descobri o universo do desenvolvimento web. Atualmente estou cursando Sistemas e Mídias Digitais na Universidade Federal do Ceará, curso este que além de aperfeiçoar meus conhecimentos de programação, ainda me possibilita ser um profissional muito mais completo, sendo capaz de entender e desenvolver projetos em diversas áreas da tecnologia, como design, audiovisual, redes de computadores... Durante esse meio tempo me apaixonei também pelo mundo mobile, e desde então me tornei mais focado no desenvolvimento Full Stack de aplicações Web.</h5>
+		<h5 class="anime">Me chamo Mateus Pereira dos Santos, tenho 19 anos e resido em Fortaleza-CE. Possuo curso técnico em informática atrelada ao ensino médio, porém meu contato com a programação veio antes disso, por volta dos 13 anos, quando descobri o universo do desenvolvimento web. Atualmente estou cursando Sistemas e Mídias Digitais na Universidade Federal do Ceará, curso este que além de aperfeiçoar meus conhecimentos de programação, ainda me possibilita ser um profissional muito mais completo, sendo capaz de entender e desenvolver projetos em diversas áreas da tecnologia, como design, audiovisual, redes de computadores... Durante esse meio tempo me apaixonei também pelo mundo mobile, e desde então me tornei mais focado no desenvolvimento Frontend de aplicações Web.</h5>
 		<h1 id="titleCuriosidades" class="anime">Algumas curiosidades...</h1>
 		<i class="fas fa-beer anime" id="beer"></i>
 		<i class="fas fa-headphones anime" id="phone"></i>
@@ -122,11 +122,25 @@
 			<div class="job callModal" id="callModal2">
 				<i class="fas fa-ellipsis-h" id="fone"></i>
 				<h3>UFCine</h3>
-				<h2>UFCine é uma plataforma de filme do curso de Cinema da UFC.</h2>
+				<h2>UFCine é uma plataforma de filmes do curso de Cinema da UFC.</h2>
 				<img src="img/Trabalhos/UFCine.png">
 				<i class="fas fa-stop-circle"></i>
 			</div>
 			<div class="job callModal" id="callModal3">
+				<i class="fas fa-ellipsis-h" id="fone"></i>
+				<h3>Lumi</h3>
+				<h2>Lumi é uma plataforma de produções audiovisuais do curso Sistemas e Mídias Digitais.</h2>
+				<img src="img/Trabalhos/lumi.png">
+				<i class="fas fa-stop-circle"></i>
+			</div>
+			<div class="job callModal" id="callModal4">
+				<i class="fas fa-ellipsis-h" id="fone"></i>
+				<h3>RespondeAqui</h3>
+				<h2>Plataforma para compartilhamento de formulário de pesquisa dentro da UFC.</h2>
+				<img src="img/Trabalhos/respondeAqui.png">
+				<i class="fas fa-stop-circle"></i>
+			</div>
+			<div class="job callModal" id="callModal5">
 				<i class="fas fa-ellipsis-h" id="fone"></i>
 				<h3>Portfólio</h3>
 				<h2>Meu portfólio pessoal.</h2>
@@ -152,7 +166,7 @@
 					<p>Smart Ear é um aplicativo desenvolvido pela equipe Now Loading, do qual fiz parte no 2º semestre no curso de Sistemas e Mídias Digitais, da Universidade Federal do Ceará. O aplicativo faz parte do 2º Projeto Integrado do curso, que visa tornar os universitários mais próximos do mercado de trabalho, tendo que desenvolver aplicações para um cliente específico.
 						A aplicação tem como função o ensino da teoria musical de uma forma lúdica e dinâmica, através de tarefas e mini-jogos.</p>
 					<p>Função: Programação back-end e front-end.<br/>
-						Linguagens utilizadas: HTML5, CSS3, P5.js</p>
+						Tecnologias utilizadas: HTML5, CSS3, P5.js</p>
 					<a href="https://nowloadingsmd.github.io/smartEar/" target="_blank"><button>Acesse aqui!</button></a>
 				</div>
 			</div>
@@ -165,7 +179,7 @@
 					<p>UFCine é uma plataforma online de straming de filmes produzidos no curso de Cinema e Audiovisual da Universidade Federal do Ceará.
 							Além dos filmes, o sistema ainda dá acesso aos portólios dos alunos do curso.</p>
 					<p>Função: Programação front-end.<br/>
-						Linguagens utilizadas: HTML5, CSS3, JavaScript, JQuery, MongoDB</p>
+						Tecnologias utilizadas: HTML5, CSS3, JavaScript, JQuery, MongoDB</p>
 					<a href="https://cineflixsmd.herokuapp.com/" target="_blank"><button>Acesse aqui!</button></a>
 				</div>
 			</div>
@@ -173,11 +187,35 @@
 		<div id="modal3" class="modal">
 			<div class="modal-content">
 				<div id="modal-job">
+					<article class="imgJog"><img src="img/Trabalhos/lumi.png"></article>
+					<span class="close"><i class="fa fa-times"></i></span><br/>
+					<p>Lumi é uma plataforma criada com a intenção de gerar visibilidade aos projetos audiovisuais desenvolvidos no curso de Sistemas e Mídias Digitais, Da Universidade Federal do Ceará.</p>
+					<p>Função: Programação front-end.<br/>
+						Tecnologias utilizadas: HTML5, CSS3, ReactJS, Firebase</p>
+					<a href="https://lumi-b8b4e.firebaseapp.com/index" target="_blank"><button>Acesse aqui!</button></a>
+				</div>
+			</div>
+		</div>
+		<div id="modal4" class="modal">
+			<div class="modal-content">
+				<div id="modal-job">
+					<article class="imgJog"><img src="img/Trabalhos/respondeAqui.png"></article>
+					<span class="close"><i class="fa fa-times"></i></span><br/>
+					<p>RespondeAqui é um sistema desenvolvido para alunos da Universidade Federal do Ceará compartilharem formulários de pesquisas para que outros alunos possam conhecer e responder suas pesquisas.</p>
+					<p>Função: Programação front-end e modelagem do Banco de Dados.<br/>
+						Tecnologias utilizadas: HTML5, CSS3, JavaScript, SpringBoot, PostgreSQL</p>
+					<a href="https://respondeaquiufc.herokuapp.com/login" target="_blank"><button>Acesse aqui!</button></a>
+				</div>
+			</div>
+		</div>
+		<div id="modal5" class="modal">
+			<div class="modal-content">
+				<div id="modal-job">
 					<article class="imgJog"><img src="img/Trabalhos/portfolio.png"></article>
 					<span class="close"><i class="fa fa-times"></i></span><br/>
 					<p>Este é o site do meu portfólio pessoal, que demonstra um pouco da minha tragetória profissional.</p>
 					<p>Função: Designer e Desenvolvedor.<br/>
-						Linguagens utilizadas: HTML5, CSS3, JavaScript, JQuery</p>
+						Tecnologias utilizadas: HTML5, CSS3, JavaScript, JQuery</p>
 					<a href="https://uaumateus.github.io/Portfolio/" target="_blank"><button>Acesse aqui!</button></a>
 				</div>
 			</div>
@@ -244,7 +282,7 @@
 	<!--RODAPÉ / REDES SOCIAIS-->
 	<footer>
 		<!-- <a href="https://www.facebook.com/uaumateus" title="facebook.com/uaumateus" target="_blank"><i class="fab fa-facebook-f"></i></a> -->
-		<a href="https://www.instagram.com/uau_mateus" title="instagram.com/uau_mateus" target="_blank"><i class="fab fa-instagram"></i></a>
+		<!-- <a href="https://www.instagram.com/uau_mateus" title="instagram.com/uau_mateus" target="_blank"><i class="fab fa-instagram"></i></a> -->
 		<a href="https://www.flickr.com/photos/uaumateus/" title="flickr.com/photos/uaumateus" target="_blank"><i class="fab fa-flickr"></i></a>
 		<a href="https://www.linkedin.com/in/uaumateus/" title="linkedin.com/in/uaumateus" target="_blank"><i class="fab fa-linkedin-in"></i></a>
 		<a href="https://github.com/uaumateus" title="github.com/uaumateus" target="_blank"><i class="fab fa-github"></i></a>

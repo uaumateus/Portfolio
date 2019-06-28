@@ -78,11 +78,19 @@ jQuery(document).ready(function($) {
   $("#callModal3").on('click', function(){
     $("#modal3").show();
   });
+  $("#callModal4").on('click', function(){
+    $("#modal4").show();
+  });
+  $("#callModal5").on('click', function(){
+    $("#modal5").show();
+  });
   // FECHAR MODAL
   $(".close").on('click', function(){
     $("#modal1").hide();
     $("#modal2").hide();
     $("#modal3").hide();
+    $("#modal4").hide();
+    $("#modal5").hide();
   });
 
 

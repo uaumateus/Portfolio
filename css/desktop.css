@@ -175,18 +175,12 @@
 
 	/* PÁGINA TRABALHOS */
 
+	#works{
+		padding-bottom: 90px;
+	}
+
 	#works h1{
 		font-size: 3em;
-	}
-	#works{
-		height: 100%;
-		padding-left: 2%;
-	}
-	#works .job{
-		float: left;
-		width: 30%;
-		margin-left: 2%;
-		margin-bottom: 90px;
 	}
 	#works h3{
 		padding-top: 35px;

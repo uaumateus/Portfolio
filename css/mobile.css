@@ -209,8 +209,10 @@
 /* PÁGINA TRABALHOS */
 #works{
 	background-color: #1ad8cf;
-	padding-bottom: 10px; 
 	text-align: center;
+	height: min-content;
+	padding: 0 30px;
+	padding-bottom: 50px;
 }
 #works h1{
 	color: #fff;
@@ -272,11 +274,10 @@
 
 #works .job{
 	margin-top: 40px;
-	width: 85%;
+	width: 100%;
 	border-radius: 10px;
 	background-color: #fff;
 	color: #26b3ff;
-	margin-left: 7.5%;
 	z-index: 1;
 	cursor: pointer;
 }
@@ -285,12 +286,18 @@
 	cursor: pointer;
 }
 
+#works #listWeb{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-gap: 50px;
+}
+
 #works #listAndroid{
 	display: none;
 }
 
 #works .job:hover img{
- 	opacity: 0.1;
+ 	opacity: 0.15;
 }
 
 #works .job:hover h3{
@@ -501,21 +508,9 @@ footer i:hover{
 	#skills #iconPC{
 		margin-top: -60px;
 	}
-	#works{
-		height: 1600px;
-	}
 }
 
 @media screen and (min-width: 600px){
-	#works .job{
-		float: left;
-		width: 40%;
-		margin-left: 7%;
-		margin-bottom: 20px;
-	}
-	#works{
-		height: 1200px;
-	}
 	#works h3{
 		padding-top: 15px;
 	}
