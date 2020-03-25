@@ -1,0 +1,89 @@
+.about{
+  text-align: center;
+}
+
+.about .title{
+  animation: showText 4s;
+  margin: 0;
+}
+
+.about .ocult{
+  text-align: center;
+}
+
+.about .bubbleBackground{
+  display: none;
+}
+
+.about .textAbout{
+  text-align: justify;
+  margin: 10px 5vw 0 5vw;
+  font-family: 'Barlow',  sans-serif;
+  font-weight: 400;
+  font-size: 1.1em;
+}
+
+.about .imgProfile{
+  width: 35vw;
+  border-radius: 20vw;
+  border: 7px double #FFF;
+}
+
+@keyframes showText{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@media (min-width: 1000px) {
+  .about{
+    text-align: left;
+  }
+  .about .textAbout{
+    width: 60vw;
+    font-size: .9em;
+  }
+  .about .ocult{
+    position: absolute;
+    bottom: 30vh;
+  }
+  .about .bubbleBackground{
+    display: block;
+    position: absolute;
+    width: 80vw;
+    height: 50vw;
+    margin-top: -5vw;
+    margin-left: 25vw;
+    z-index: -1;
+  }
+  .about .imgProfile{
+    position: absolute;
+    bottom: 10vw;
+    margin-left: 76vw;
+  }
+  .about .textAbout{
+    width: 30vw;
+    text-align: right;
+    float: right;
+    margin-right: 5vw;
+    font-family: 'Barlow',  sans-serif;
+    font-weight: 400;
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about .textAbout{
+    font-size: 1.1em;
+  }
+}
+
+@media (min-width: 1400px) {
+  .about .textAbout{
+    font-size: 1.3em;
+  }
+}

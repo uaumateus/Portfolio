@@ -1,0 +1,180 @@
+.Navbar{
+    width: 100vw;
+    height: 60px;
+    background-color: #FFF;
+    position: fixed;
+    top: 0;
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.1);
+}
+
+.Navbar .topContainer{
+    width: 100%;
+    height: 60px;
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    align-items: center;
+}
+
+.Navbar.show{
+    height: 100vh;
+    animation: showNavbar 1s;
+}
+
+.Navbar.hide{
+    height: 60px;
+    animation: hideNavbar 1s;
+}
+
+.Navbar p{
+    font-family: 'Passion One', cursive;
+    font-weight: 400;
+    font-size: 1.7em;
+    color: #333;
+    margin: 0 20px;
+}
+
+.Navbar .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh;
+}
+
+.hamburger{
+    width: 30px;
+    height: 18px;
+    position: relative;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+  
+.hamburger span{
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #2680FF;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+  
+.hamburger span:nth-child(1) {
+    top: 0px;
+}
+  
+.hamburger span:nth-child(2),.hamburger span:nth-child(3) {
+    top: 8px;
+}
+  
+.hamburger span:nth-child(4) {
+    top: 16px;
+}
+  
+.hamburger.open span:nth-child(1) {
+    top: 8px;
+    width: 0%;
+    left: 50%;
+}
+  
+.hamburger.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+  
+.hamburger.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+  
+.hamburger.open span:nth-child(4) {
+    top: 8px;
+    width: 0%;
+    left: 50%;
+}
+
+.Navbar .btn {
+	line-height: 50px;
+	height: 50px;
+	text-align: center;
+	width: 100%;
+	cursor: pointer;
+}
+.btn-one {
+	color: #000;
+	transition: all 0.3s;
+    position: relative;
+    margin: 1vh 0;
+}
+.btn-one span {
+    transition: all 0.3s;
+    font-family: 'Barlow',  sans-serif;
+    font-weight: 200;
+    font-size: 1.5em;
+}
+.btn-one::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	height: 100%;
+	z-index: 1;
+	opacity: 0;
+	transition: all 0.3s;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	transform: scale(0.1, 1);
+}
+.btn-one:hover span {
+	letter-spacing: 2px;
+}
+.btn-one:hover::before {
+	opacity: 1;	
+	transform: scale(1, 1);	
+}
+.btn-one::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	height: 100%;
+	z-index: 1;
+	transition: all 0.3s;
+}
+.btn-one:hover::after {
+	opacity: 0;	
+	transform: scale(0.1, 1);
+}
+
+@keyframes showNavbar{
+    0%{ height: 60px; }
+    100%{ height: 100vh; }
+}
+
+@keyframes hideNavbar{
+    0%{ height: 100vh; }
+    100%{ height: 60px; }
+}

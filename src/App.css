@@ -1,0 +1,61 @@
+.slide {
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapper{
+  width: 100vw;
+  background-image: linear-gradient(to bottom, #2680FF, #26B3FF, #1CDCFF, #1AD8CF, #33c08c);
+}
+
+.title {
+  font-family: 'Passion One', cursive;
+  font-weight: 400;
+  font-size: 3.5em;
+  color: #FFFFFF;
+}
+
+.ocult{
+  display: none;
+}
+
+.hide{
+  display: block;
+}
+
+@media (min-width: 1000px) {
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 500vw;
+    background-image: linear-gradient(to right, #2680FF, #26B3FF, #1CDCFF, #1AD8CF, #33c08c);
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+  }
+  
+  .outer-wrapper {
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: absolute;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .title{
+    font-size: 6em;
+  }
+}
+
+@media (min-width: 1400px) {
+  .title{
+    font-size: 9em;
+  }
+}

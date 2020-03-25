@@ -1,0 +1,122 @@
+.cardSkill{
+  width: 100%;
+  background-color: #FFF;
+  border-radius: 10px;
+  box-shadow: 0px 3px 30px rgba(0, 0, 0, .1);
+  display: grid;
+  grid-template-rows: 1fr 10px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cardSkill .hideCard{
+  border-radius: 10px !important;
+  height: 68vh !important;
+  animation: showSkillsMobile 1s;
+  margin-bottom: 67vh;
+}
+
+.cardSkill .titleCard{
+  font-family: 'Barlow',  sans-serif;
+  font-weight: 500;
+  font-size: 2em;
+  background: linear-gradient(to left,#26B3FF, #2680FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.cardSkill .infos{
+  height: 10px;
+  width: 100%;
+  background-image: linear-gradient(to left,#26B3FF, #2680FF);
+  border-radius: 0 0 10px 10px;
+}
+
+.cardSkill .infos div{
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  display: none;
+  animation: showInfos 1.5s;
+}
+
+.cardSkill .infos article{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 30px;
+}
+
+.cardSkill .infos p{
+  color: #FFF;
+  font-family: 'Barlow',  sans-serif;
+  font-weight: 200;
+  font-size: 1em;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.cardSkill .infos .percentEmpty{
+  width: 100%;
+  height: 4px;
+  border: 1px solid #FFF;
+  border-radius: 20px;
+}
+
+.cardSkill .hideSkills{
+  display: flex !important;
+}
+
+@keyframes showSkillsMobile{
+  0% {
+    height: 10px;
+    margin-bottom: 0;
+  }
+  100% {
+    height: 68vh;
+    margin-bottom: 67vh;
+  }
+}
+
+@keyframes showSkillsDesktop{
+  0% {
+    height: 10px;
+    margin-bottom: 0;
+  }
+  100% {
+    height: 50vh;
+    margin-bottom: 49vh;
+  }
+}
+
+
+@keyframes showInfos{
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (min-height: 800px) {
+  .cardSkill .infos p{
+    font-size: 1.5em;
+  }
+  .cardSkill .hideCard{
+    animation: showSkillsDesktop 1s;
+    height: 50vh !important;
+    margin-bottom: 49vh;
+  }
+}
+
+@media (min-width: 1400px) {
+  .cardSkill .titleCard{
+    font-size: 3em;
+  }
+} 

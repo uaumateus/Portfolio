@@ -1,0 +1,83 @@
+.skills{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.skills .ocult{
+    position: absolute;
+}
+
+.skills .title{
+    animation: showText 1.5s;
+    margin: 0;
+}
+
+.skills .upTitle{
+    margin-top: -30vh;
+    animation: upTitle 1.5s;
+    font-size: .8em;
+}
+
+.skills .cards{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 80%;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-gap: 3vw;
+    margin-top: 25vh;
+    animation: showCards 1.5s;
+}
+
+.skills .ocultCard{
+    display: none;
+}
+
+.skills .hideCards{
+    display: grid !important;
+}
+
+@keyframes showText{
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes upTitle{
+    0% {
+        margin-top: 0;
+        font-size: 1em;
+    }
+    100% {
+        margin-top: -30vh;
+        font-size: .8em;
+    }
+}
+
+@keyframes showCards{
+    0% {
+        opacity: 0;
+        margin-top: 100px;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 5vh;
+    }
+}
+
+@media (min-width: 1000px) {
+    .skills .cards{
+        width: 60%;
+        height: 50vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 3vw;
+        margin-top: 5vh;
+    }
+}

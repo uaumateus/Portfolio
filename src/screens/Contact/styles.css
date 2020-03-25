@@ -1,0 +1,104 @@
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact .imgContact{
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.contact .titleContact{
+    font-family: 'Passion One', cursive;
+    font-weight: 400;
+    font-size: 2.5em;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.contact .subtitleContact{
+    color: #FFF;
+    font-family: 'Barlow',  sans-serif;
+    font-weight: 200;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.contact .methods{
+    display: grid;
+    grid-template-columns: 60px 60px 60px;
+    grid-gap: 30px;
+    margin-top: 30px;
+}
+
+.contact .methods .methodContact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    border-radius: 70px;
+    border: 3px solid #FFF;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background .8s;
+    text-decoration: none;
+}
+
+.contact .methods .methodContact:hover{
+    background: #FFF;
+}
+
+.contact .methods .methodContact i{
+    font-size: 2em;
+    color: #FFF;
+    transition: color .8s;
+}
+
+.contact .methods .methodContact:hover i{
+    color: #2680FF;
+}
+
+@media (min-width: 1000px) {
+    .contact .imgContact{
+        width: 120px;
+    }
+    .contact .titleContact{
+        font-size: 3.5em;
+    }
+    .contact .subtitleContact{
+        font-size: 1.8em;
+    }
+    .contact .methods{
+        grid-template-columns: 80px 80px 80px;
+        grid-gap: 100px;
+    }
+    .contact .methods .methodContact{
+        height: 80px;
+    }
+    .contact .methods .methodContact i{
+        font-size: 2.5em;
+    }
+}
+
+@media (min-width: 1400px) {
+    .contact .methods{
+        grid-template-columns: 100px 100px 100px;
+    }
+    .contact .methods .methodContact{
+        height: 100px;
+    }
+    .contact .imgContact{
+        width: 150px;
+    }
+    .contact .titleContact{
+        font-size: 5em;
+    }
+    .contact .subtitleContact{
+        font-size: 2.4em;
+    }
+    .contact .methods .methodContact i{
+        font-size: 4em;
+    }
+}

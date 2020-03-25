@@ -1,0 +1,179 @@
+.works{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.works .ocult{
+    position: absolute;
+}
+
+.works .title{
+    animation: showTextWork 1.5s;
+    margin: -40vh 0 0 0;
+    font-size: 5em;
+}
+
+.works .swingText{
+    -webkit-animation: swing 1s ease;
+    animation: swing 1s ease;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+.works .buttons button{
+    border-radius: 50px;
+    height: 30px;
+    min-width: 120px;
+    margin: 20px;
+    font-family: 'Barlow',  sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+    color: #FFF;
+    border: 2px solid #FFF;
+    background: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.works .buttons .active{
+    background: #FFF;
+    border: none;
+    color: #1AD8CF;
+}
+
+.works .jobs{
+    height: 50vh;
+    width: 70vw;
+    margin: 0 5vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.works .job{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 10px;
+    padding-top: 10px;
+}
+
+.works .job article{
+    width: 60px;
+    height: 60px;
+    background-color: #FFF;
+    border-radius: 60px;
+    border: 1px solid #222;
+}
+
+.works .job p{
+    font-family: 'Barlow',  sans-serif;
+    font-weight: 200;
+    font-size: 1.5em;
+    margin: 15px 0 0 0;
+    color: #222;
+}
+
+.works .job:hover{
+    background-color: #FFF;
+    width: 110%;
+    height: 110%;
+    animation: expandCard .5s;
+}
+
+.works .job:hover article{
+    transform: scale(1.2);
+    transition: transform .5s;
+}
+
+.works .job:hover p{
+    font-size: 1.7em;
+    transition: font-size .5s;
+}
+
+
+@keyframes swing{
+    15%{
+        -webkit-transform: translateX(20px);
+        transform: translateX(20px);
+    }
+    30%{
+        -webkit-transform: translateX(-20px);
+        transform: translateX(-20px);
+    }
+    50%{
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+    }
+    65%{
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
+    80%{
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    100%{
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes showTextWork{
+    0% {
+      opacity: 0;
+      margin-top: -55vh;
+    }
+    100% {
+      opacity: 1;
+      margin-top: -40vh;
+    }
+}
+
+@keyframes expandCard{
+    0%{
+        width: 100%;
+        height: 100%;
+    }
+    100%{
+        width: 110%;
+        height: 110%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .works .jobs{
+        width: 35vw;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .works .job article{
+        width: 80px;
+        height: 80px;
+    }
+    .works .buttons button{
+        height: 40px;
+        min-width: 140px;
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 1400px) {
+    .works .title{
+        font-size: 7em;
+    }
+    .works .job article{
+        width: 100px;
+        height: 100px;
+    }
+    .works .job p{
+        font-size: 2em;
+    }
+    .works .job:hover p{
+        font-size: 2.2em;
+    }
+    
+}

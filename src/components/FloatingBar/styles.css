@@ -1,0 +1,94 @@
+.floatingBar{
+  width: 750px;
+  height: 60px;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, .5), rgba(228, 236, 255, 0.4));
+  border-radius: 15px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 60px;
+  position: fixed;
+  display: grid;
+  grid-template-columns: 90px auto 90px auto 150px auto 120px auto 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.initialFloatingBar{
+  opacity: 1;
+  animation: initialFloatingBar 4.5s;
+}
+
+.floatingBar .options{
+  padding: 0 15px 0 15px;
+  margin: 0;
+  font-family: 'Barlow', sans-serif;
+  color: #FFFFFF;
+  font-size: 1.5em;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.floatingBar .separator{
+  font-size: 1.5em;
+  cursor: default;
+}
+
+.progressiveBar{
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 580px;
+  height: 1px;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  animation: showProgressiveBar 3s;
+}
+
+.progressiveBar .circle{
+  width: 10px;
+  height: 10px;
+  background: #FFFFFF;
+  border-radius: 50px;
+  margin: -5px;
+}
+
+.progressiveBar .completed{
+  background: #333;
+}
+
+.progress{
+  position: fixed;
+  bottom: 40px;
+  height: 1px;
+  background: #333;
+}
+
+@keyframes initialFloatingBar{
+  0% {
+    opacity: 0;
+    bottom: 40px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 60px;
+  }
+}
+
+@keyframes showProgressiveBar{
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  40% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 580px;
+    opacity: 1;
+  }
+}
