@@ -30,27 +30,27 @@ function NavBar() {
                 <div className="content">
                     <div className="box-1">
                         <div className="btn btn-one">
-                            <span>Início</span>
+                            <span>Home</span>
                         </div>
                     </div>
                     <div className="box-1">
                         <div className="btn btn-one">
-                            <span>Sobre</span>
+                            <span>About</span>
                         </div>
                     </div>
                     <div className="box-1">
                         <div className="btn btn-one">
-                            <span>Habilidades</span>
+                            <span>Skills</span>
                         </div>
                     </div>
                     <div className="box-1">
                         <div className="btn btn-one">
-                            <span>Trabalhos</span>
+                            <span>Works</span>
                         </div>
                     </div>
                     <div className="box-1">
                         <div className="btn btn-one">
-                            <span>Sobre</span>
+                            <span>About</span>
                         </div>
                     </div>
                 </div>
