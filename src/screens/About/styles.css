@@ -43,9 +43,8 @@
   .about{
     text-align: left;
   }
-  .about .textAbout{
-    width: 60vw;
-    font-size: .9em;
+  .about .title{
+    margin-left: 10vw;
   }
   .about .ocult{
     position: absolute;
@@ -61,29 +60,27 @@
     z-index: -1;
   }
   .about .imgProfile{
+    width: 15vw;
     position: absolute;
     bottom: 10vw;
     margin-left: 76vw;
+    border: none;
   }
   .about .textAbout{
-    width: 30vw;
+    width: 50vw;
     text-align: right;
     float: right;
     margin-right: 5vw;
     font-family: 'Barlow',  sans-serif;
     font-weight: 400;
-    margin-top: 30px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .about .textAbout{
-    font-size: 1.1em;
+    margin-top: 40px;
+    font-size: 1.3em;
   }
 }
 
 @media (min-width: 1400px) {
   .about .textAbout{
-    font-size: 1.3em;
+    font-size: 1.5em;
+    margin-top: 60px;
   }
 }

@@ -9,7 +9,7 @@
   bottom: 60px;
   position: fixed;
   display: grid;
-  grid-template-columns: 90px auto 90px auto 150px auto 120px auto 100px;
+  grid-template-columns: 100px auto 100px auto 100px auto 100px auto 100px;
   align-items: center;
   justify-content: center;
 }
@@ -39,7 +39,7 @@
   bottom: 40px;
   left: 50%;
   transform: translate(-50%, 0);
-  width: 580px;
+  width: 600px;
   height: 1px;
   background: #FFFFFF;
   display: flex;

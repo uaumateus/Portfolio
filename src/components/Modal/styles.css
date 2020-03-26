@@ -31,7 +31,51 @@
     width: 70vw;
     height: 80vh;
     border-radius: 30px;
+    text-align: center;
 }
+
+.modal .containerTop{
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    height: 60px;
+    align-items: center;
+    padding-top: 20px;
+    text-align: left;
+}
+
+.modal .containerTop p{
+    font-family: 'Passion One', cursive;
+    font-weight: 400;
+    font-size: 3.5em;
+    color: #333;
+    margin: 0;
+    text-align: center;
+}
+
+.modal .containerTop i{
+    font-size: 2em;
+    margin-top: -10px;
+    color: #333;
+}
+
+.modal .containerTop i:hover{
+    color: #2680FF;
+    cursor: pointer;
+}
+
+.modal .content img{
+    height: 50vh;
+}
+
+.modal .aboutWork{
+    padding: 0 5vw;
+    word-break: break-all;
+    color: #333;
+    font-size: 1.3em;
+    font-family: 'Barlow',  sans-serif;
+    font-weight: 400;
+    text-align: left;
+} 
 
 .modal .showModal{
     animation: showModal 1s;
@@ -80,3 +124,4 @@
         margin-top: -100px;
     }
 }
+

@@ -35,7 +35,7 @@ function Skills({nameClass}) {
         <div className={"cards ocultCard " + classCards}>
           <CardSkill title="Developer" skills={["HTML5", "CSS3", "React JS", "React Native", "Java", "PostgreSQL", "Firebase"]} percents={["100%", "100%", "80%", "80%", "80%", "80%", "50%"]}/>
           <CardSkill title="Design" skills={["UI", "UX", "Adobe XD", "Adobe Photoshop", "Mobile First"]} percents={["70%", "60%", "90%", "75%", "75%"]}/>
-          <CardSkill title="Projetos" skills={["GIT", "Scrum", "Trello", "Slack"]} percents={["80%", "50%", "100%", "100%"]}/>
+          <CardSkill title="Projects" skills={["GIT", "Scrum", "Trello", "Slack"]} percents={["80%", "50%", "100%", "100%"]}/>
         </div>
       }
     </div>

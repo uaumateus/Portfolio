@@ -62,7 +62,8 @@
     .home{
         display: grid;
         grid-template-columns: 50vw 34vw 1vw;
-        align-items: center;
+        align-items: center;    
+        justify-content: left;
         padding-left: 10vw;
         text-align: left;
     }

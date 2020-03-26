@@ -19,7 +19,7 @@ function Home({ windowWidth }) {
     });
   }
   useEffect(() => {
-    typeWrite("Desenvolvedor Front-End");
+    typeWrite("Front-End Developer");
   },[]);
   return (
     <div className="slide home" id="home">

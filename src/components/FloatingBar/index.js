@@ -46,15 +46,15 @@ function FloatingBar({ valueProgress }) {
   return (
     <div className="containerFloating">
       <div className={"floatingBar " + classFloating}>
-        <p className="options" onClick={() => scrollTo(document.getElementById("home").offsetLeft)}>Início</p>
+        <p className="options" onClick={() => scrollTo(document.getElementById("home").offsetLeft)}>Home</p>
         <p className="options separator">-</p>
-        <p className="options" onClick={() => scrollTo(document.getElementById("about").offsetLeft)}>Sobre</p>
+        <p className="options" onClick={() => scrollTo(document.getElementById("about").offsetLeft)}>About</p>
         <p className="options separator">-</p>
-        <p className="options" onClick={() => {scrollTo(document.getElementById("skills").offsetLeft); valueProgress = valueProgress}}>Habilidades</p>
+        <p className="options" onClick={() => {scrollTo(document.getElementById("skills").offsetLeft); valueProgress = valueProgress}}>Skills</p>
         <p className="options separator">-</p>
-        <p className="options" onClick={() => scrollTo(document.getElementById("works").offsetLeft)}>Trabalhos</p>
+        <p className="options" onClick={() => scrollTo(document.getElementById("works").offsetLeft)}>Works</p>
         <p className="options separator">-</p>
-        <p className="options" onClick={() => scrollTo(document.getElementById("contact").offsetLeft)}>Contato</p>
+        <p className="options" onClick={() => scrollTo(document.getElementById("contact").offsetLeft)}>Contact</p>
       </div>
       <div className="progressiveBar">
         <span className={"circle " + circleOne}></span>

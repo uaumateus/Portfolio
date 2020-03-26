@@ -7,8 +7,8 @@ function Contact() {
   return (
     <div className="slide contact" id="contact">
       <img src={avatar} className="imgContact"></img>
-      <h1 className="titleContact">Ficou interessado?</h1>
-      <h1 className="subtitleContact">Entre em contato comigo :)</h1>
+      <h1 className="titleContact">Were you interested??</h1>
+      <h1 className="subtitleContact">Contact me :)</h1>
       <div className="methods">
         <a href="https://github.com/uaumateus" title="github.com/uaumateus" target="_blank" className="methodContact">
           <i class="fab fa-github"></i>

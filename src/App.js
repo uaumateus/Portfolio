@@ -13,6 +13,7 @@ function App() {
   const [valueProgress, setValueProgress] = useState(0);
   const [classModal, setClassModal] = useState("hideModal");
   const [showModal, setShowModal] = useState(false);
+  const [work, setWork] = useState("");
   const [classAbout, setClassAbout] = useState("");
   const [classSkills, setClassSkills] = useState("");
   const [classWorks, setClassWorks] = useState("");
@@ -70,13 +71,14 @@ function App() {
     }
   }
 
-  function handleModal(){
+  function handleModal(e){
     if(showModal){
       setClassModal("hideModal");
       setTimeout(() => {
         setShowModal(!showModal);
       }, 800);
     }else{
+      setWork(e);
       setClassModal("showModal");
       setShowModal(!showModal);
     }
@@ -100,7 +102,7 @@ function App() {
       }
       
       {showModal &&
-        <Modal handleModal={handleModal} classModal={classModal}/>
+        <Modal handleModal={handleModal} classModal={classModal} work={work}/>
       }
     </div>
   );
